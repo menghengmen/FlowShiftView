@@ -1,0 +1,697 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 48;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		1B3951C1215DB9F600429D63 /* MHFlowCardLayout.m in Sources */ = {isa = PBXBuildFile; fileRef = 1B3951C0215DB9F600429D63 /* MHFlowCardLayout.m */; };
+		1B3951C4215DC76E00429D63 /* CardFlowViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 1B3951C3215DC76E00429D63 /* CardFlowViewController.m */; };
+		28CE2BD2B98B7C19F0EAA993 /* libPods-ShiftPickerViewTests.a in Frameworks */ = {isa = PBXBuildFile; fileRef = BC726E942993F5D117F9B972 /* libPods-ShiftPickerViewTests.a */; };
+		8004F18D12BC11C279861F64 /* libPods-ShiftPickerView.a in Frameworks */ = {isa = PBXBuildFile; fileRef = E2D46EDD5753976C9AAB2F94 /* libPods-ShiftPickerView.a */; };
+		B0BFE020215D1C1400E59606 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = B0BFE01F215D1C1400E59606 /* AppDelegate.m */; };
+		B0BFE023215D1C1400E59606 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = B0BFE022215D1C1400E59606 /* ViewController.m */; };
+		B0BFE026215D1C1400E59606 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B0BFE024215D1C1400E59606 /* Main.storyboard */; };
+		B0BFE028215D1C1400E59606 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = B0BFE027215D1C1400E59606 /* Assets.xcassets */; };
+		B0BFE02B215D1C1400E59606 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B0BFE029215D1C1400E59606 /* LaunchScreen.storyboard */; };
+		B0BFE02E215D1C1400E59606 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = B0BFE02D215D1C1400E59606 /* main.m */; };
+		B0BFE038215D1C1500E59606 /* ShiftPickerViewTests.m in Sources */ = {isa = PBXBuildFile; fileRef = B0BFE037215D1C1500E59606 /* ShiftPickerViewTests.m */; };
+		B0BFE043215D1C1500E59606 /* ShiftPickerViewUITests.m in Sources */ = {isa = PBXBuildFile; fileRef = B0BFE042215D1C1500E59606 /* ShiftPickerViewUITests.m */; };
+		B0BFE052215D1C3A00E59606 /* ShiftPickerView.m in Sources */ = {isa = PBXBuildFile; fileRef = B0BFE051215D1C3A00E59606 /* ShiftPickerView.m */; };
+		B0BFE055215D280F00E59606 /* MHFlowLayout.m in Sources */ = {isa = PBXBuildFile; fileRef = B0BFE054215D280F00E59606 /* MHFlowLayout.m */; };
+		B0BFE059215D2AA200E59606 /* MHPickerViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = B0BFE057215D2AA200E59606 /* MHPickerViewCell.m */; };
+		B0BFE05A215D2AA200E59606 /* MHPickerViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = B0BFE058215D2AA200E59606 /* MHPickerViewCell.xib */; };
+		E8A173FEB9322AD88E05F6FC /* libPods-ShiftPickerViewUITests.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 488CF34B0397251BFFCCD07E /* libPods-ShiftPickerViewUITests.a */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		B0BFE034215D1C1500E59606 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = B0BFE013215D1C1400E59606 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = B0BFE01A215D1C1400E59606;
+			remoteInfo = ShiftPickerView;
+		};
+		B0BFE03F215D1C1500E59606 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = B0BFE013215D1C1400E59606 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = B0BFE01A215D1C1400E59606;
+			remoteInfo = ShiftPickerView;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		1B3951BF215DB9F600429D63 /* MHFlowCardLayout.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MHFlowCardLayout.h; sourceTree = "<group>"; };
+		1B3951C0215DB9F600429D63 /* MHFlowCardLayout.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MHFlowCardLayout.m; sourceTree = "<group>"; };
+		1B3951C2215DC76E00429D63 /* CardFlowViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = CardFlowViewController.h; sourceTree = "<group>"; };
+		1B3951C3215DC76E00429D63 /* CardFlowViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = CardFlowViewController.m; sourceTree = "<group>"; };
+		2D3C0BFE6DAFD87AFC9234E4 /* Pods-ShiftPickerView.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ShiftPickerView.release.xcconfig"; path = "Pods/Target Support Files/Pods-ShiftPickerView/Pods-ShiftPickerView.release.xcconfig"; sourceTree = "<group>"; };
+		488CF34B0397251BFFCCD07E /* libPods-ShiftPickerViewUITests.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-ShiftPickerViewUITests.a"; sourceTree = BUILT_PRODUCTS_DIR; };
+		4C968A5A39A803636D52FBCE /* Pods-ShiftPickerViewTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ShiftPickerViewTests.release.xcconfig"; path = "Pods/Target Support Files/Pods-ShiftPickerViewTests/Pods-ShiftPickerViewTests.release.xcconfig"; sourceTree = "<group>"; };
+		7367D527D7C79FA2193EB143 /* Pods-ShiftPickerViewUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ShiftPickerViewUITests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-ShiftPickerViewUITests/Pods-ShiftPickerViewUITests.debug.xcconfig"; sourceTree = "<group>"; };
+		79BA935FC8C4ABB302052326 /* Pods-ShiftPickerViewTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ShiftPickerViewTests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-ShiftPickerViewTests/Pods-ShiftPickerViewTests.debug.xcconfig"; sourceTree = "<group>"; };
+		A64CB308E9255D3094C372B2 /* Pods-ShiftPickerView.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ShiftPickerView.debug.xcconfig"; path = "Pods/Target Support Files/Pods-ShiftPickerView/Pods-ShiftPickerView.debug.xcconfig"; sourceTree = "<group>"; };
+		B0BFE01B215D1C1400E59606 /* ShiftPickerView.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ShiftPickerView.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		B0BFE01E215D1C1400E59606 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
+		B0BFE01F215D1C1400E59606 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
+		B0BFE021215D1C1400E59606 /* ViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ViewController.h; sourceTree = "<group>"; };
+		B0BFE022215D1C1400E59606 /* ViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ViewController.m; sourceTree = "<group>"; };
+		B0BFE025215D1C1400E59606 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		B0BFE027215D1C1400E59606 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		B0BFE02A215D1C1400E59606 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		B0BFE02C215D1C1400E59606 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		B0BFE02D215D1C1400E59606 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		B0BFE033215D1C1500E59606 /* ShiftPickerViewTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = ShiftPickerViewTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		B0BFE037215D1C1500E59606 /* ShiftPickerViewTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ShiftPickerViewTests.m; sourceTree = "<group>"; };
+		B0BFE039215D1C1500E59606 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		B0BFE03E215D1C1500E59606 /* ShiftPickerViewUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = ShiftPickerViewUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		B0BFE042215D1C1500E59606 /* ShiftPickerViewUITests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ShiftPickerViewUITests.m; sourceTree = "<group>"; };
+		B0BFE044215D1C1500E59606 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		B0BFE050215D1C3A00E59606 /* ShiftPickerView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ShiftPickerView.h; sourceTree = "<group>"; };
+		B0BFE051215D1C3A00E59606 /* ShiftPickerView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ShiftPickerView.m; sourceTree = "<group>"; };
+		B0BFE053215D280F00E59606 /* MHFlowLayout.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MHFlowLayout.h; sourceTree = "<group>"; };
+		B0BFE054215D280F00E59606 /* MHFlowLayout.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MHFlowLayout.m; sourceTree = "<group>"; };
+		B0BFE056215D2AA200E59606 /* MHPickerViewCell.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MHPickerViewCell.h; sourceTree = "<group>"; };
+		B0BFE057215D2AA200E59606 /* MHPickerViewCell.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MHPickerViewCell.m; sourceTree = "<group>"; };
+		B0BFE058215D2AA200E59606 /* MHPickerViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = MHPickerViewCell.xib; sourceTree = "<group>"; };
+		BC726E942993F5D117F9B972 /* libPods-ShiftPickerViewTests.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-ShiftPickerViewTests.a"; sourceTree = BUILT_PRODUCTS_DIR; };
+		E2D46EDD5753976C9AAB2F94 /* libPods-ShiftPickerView.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-ShiftPickerView.a"; sourceTree = BUILT_PRODUCTS_DIR; };
+		E684050541B823B0A4D3A0EA /* Pods-ShiftPickerViewUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ShiftPickerViewUITests.release.xcconfig"; path = "Pods/Target Support Files/Pods-ShiftPickerViewUITests/Pods-ShiftPickerViewUITests.release.xcconfig"; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		B0BFE018215D1C1400E59606 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				8004F18D12BC11C279861F64 /* libPods-ShiftPickerView.a in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		B0BFE030215D1C1500E59606 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				28CE2BD2B98B7C19F0EAA993 /* libPods-ShiftPickerViewTests.a in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		B0BFE03B215D1C1500E59606 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				E8A173FEB9322AD88E05F6FC /* libPods-ShiftPickerViewUITests.a in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		516A77B101691293240E75C3 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				E2D46EDD5753976C9AAB2F94 /* libPods-ShiftPickerView.a */,
+				BC726E942993F5D117F9B972 /* libPods-ShiftPickerViewTests.a */,
+				488CF34B0397251BFFCCD07E /* libPods-ShiftPickerViewUITests.a */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		5B1617AD278FC7F1FC369FE4 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				A64CB308E9255D3094C372B2 /* Pods-ShiftPickerView.debug.xcconfig */,
+				2D3C0BFE6DAFD87AFC9234E4 /* Pods-ShiftPickerView.release.xcconfig */,
+				79BA935FC8C4ABB302052326 /* Pods-ShiftPickerViewTests.debug.xcconfig */,
+				4C968A5A39A803636D52FBCE /* Pods-ShiftPickerViewTests.release.xcconfig */,
+				7367D527D7C79FA2193EB143 /* Pods-ShiftPickerViewUITests.debug.xcconfig */,
+				E684050541B823B0A4D3A0EA /* Pods-ShiftPickerViewUITests.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
+		B0BFE012215D1C1400E59606 = {
+			isa = PBXGroup;
+			children = (
+				B0BFE01D215D1C1400E59606 /* ShiftPickerView */,
+				B0BFE036215D1C1500E59606 /* ShiftPickerViewTests */,
+				B0BFE041215D1C1500E59606 /* ShiftPickerViewUITests */,
+				B0BFE01C215D1C1400E59606 /* Products */,
+				5B1617AD278FC7F1FC369FE4 /* Pods */,
+				516A77B101691293240E75C3 /* Frameworks */,
+			);
+			sourceTree = "<group>";
+		};
+		B0BFE01C215D1C1400E59606 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				B0BFE01B215D1C1400E59606 /* ShiftPickerView.app */,
+				B0BFE033215D1C1500E59606 /* ShiftPickerViewTests.xctest */,
+				B0BFE03E215D1C1500E59606 /* ShiftPickerViewUITests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		B0BFE01D215D1C1400E59606 /* ShiftPickerView */ = {
+			isa = PBXGroup;
+			children = (
+				B0BFE01E215D1C1400E59606 /* AppDelegate.h */,
+				B0BFE01F215D1C1400E59606 /* AppDelegate.m */,
+				B0BFE021215D1C1400E59606 /* ViewController.h */,
+				B0BFE022215D1C1400E59606 /* ViewController.m */,
+				1B3951C2215DC76E00429D63 /* CardFlowViewController.h */,
+				1B3951C3215DC76E00429D63 /* CardFlowViewController.m */,
+				B0BFE024215D1C1400E59606 /* Main.storyboard */,
+				B0BFE027215D1C1400E59606 /* Assets.xcassets */,
+				B0BFE029215D1C1400E59606 /* LaunchScreen.storyboard */,
+				B0BFE02C215D1C1400E59606 /* Info.plist */,
+				B0BFE02D215D1C1400E59606 /* main.m */,
+				B0BFE050215D1C3A00E59606 /* ShiftPickerView.h */,
+				B0BFE051215D1C3A00E59606 /* ShiftPickerView.m */,
+				B0BFE053215D280F00E59606 /* MHFlowLayout.h */,
+				B0BFE054215D280F00E59606 /* MHFlowLayout.m */,
+				1B3951BF215DB9F600429D63 /* MHFlowCardLayout.h */,
+				1B3951C0215DB9F600429D63 /* MHFlowCardLayout.m */,
+				B0BFE056215D2AA200E59606 /* MHPickerViewCell.h */,
+				B0BFE057215D2AA200E59606 /* MHPickerViewCell.m */,
+				B0BFE058215D2AA200E59606 /* MHPickerViewCell.xib */,
+			);
+			path = ShiftPickerView;
+			sourceTree = "<group>";
+		};
+		B0BFE036215D1C1500E59606 /* ShiftPickerViewTests */ = {
+			isa = PBXGroup;
+			children = (
+				B0BFE037215D1C1500E59606 /* ShiftPickerViewTests.m */,
+				B0BFE039215D1C1500E59606 /* Info.plist */,
+			);
+			path = ShiftPickerViewTests;
+			sourceTree = "<group>";
+		};
+		B0BFE041215D1C1500E59606 /* ShiftPickerViewUITests */ = {
+			isa = PBXGroup;
+			children = (
+				B0BFE042215D1C1500E59606 /* ShiftPickerViewUITests.m */,
+				B0BFE044215D1C1500E59606 /* Info.plist */,
+			);
+			path = ShiftPickerViewUITests;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		B0BFE01A215D1C1400E59606 /* ShiftPickerView */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = B0BFE047215D1C1500E59606 /* Build configuration list for PBXNativeTarget "ShiftPickerView" */;
+			buildPhases = (
+				5D1E4DE631F9D6B8176A82CB /* [CP] Check Pods Manifest.lock */,
+				B0BFE017215D1C1400E59606 /* Sources */,
+				B0BFE018215D1C1400E59606 /* Frameworks */,
+				B0BFE019215D1C1400E59606 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = ShiftPickerView;
+			productName = ShiftPickerView;
+			productReference = B0BFE01B215D1C1400E59606 /* ShiftPickerView.app */;
+			productType = "com.apple.product-type.application";
+		};
+		B0BFE032215D1C1500E59606 /* ShiftPickerViewTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = B0BFE04A215D1C1500E59606 /* Build configuration list for PBXNativeTarget "ShiftPickerViewTests" */;
+			buildPhases = (
+				3911008617CB35A29EFC8C3E /* [CP] Check Pods Manifest.lock */,
+				B0BFE02F215D1C1500E59606 /* Sources */,
+				B0BFE030215D1C1500E59606 /* Frameworks */,
+				B0BFE031215D1C1500E59606 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				B0BFE035215D1C1500E59606 /* PBXTargetDependency */,
+			);
+			name = ShiftPickerViewTests;
+			productName = ShiftPickerViewTests;
+			productReference = B0BFE033215D1C1500E59606 /* ShiftPickerViewTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+		B0BFE03D215D1C1500E59606 /* ShiftPickerViewUITests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = B0BFE04D215D1C1500E59606 /* Build configuration list for PBXNativeTarget "ShiftPickerViewUITests" */;
+			buildPhases = (
+				3BCD617C2FDBBA1041D9A29C /* [CP] Check Pods Manifest.lock */,
+				B0BFE03A215D1C1500E59606 /* Sources */,
+				B0BFE03B215D1C1500E59606 /* Frameworks */,
+				B0BFE03C215D1C1500E59606 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				B0BFE040215D1C1500E59606 /* PBXTargetDependency */,
+			);
+			name = ShiftPickerViewUITests;
+			productName = ShiftPickerViewUITests;
+			productReference = B0BFE03E215D1C1500E59606 /* ShiftPickerViewUITests.xctest */;
+			productType = "com.apple.product-type.bundle.ui-testing";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		B0BFE013215D1C1400E59606 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastUpgradeCheck = 0900;
+				ORGANIZATIONNAME = MengHeng;
+				TargetAttributes = {
+					B0BFE01A215D1C1400E59606 = {
+						CreatedOnToolsVersion = 9.0;
+						ProvisioningStyle = Automatic;
+					};
+					B0BFE032215D1C1500E59606 = {
+						CreatedOnToolsVersion = 9.0;
+						ProvisioningStyle = Automatic;
+						TestTargetID = B0BFE01A215D1C1400E59606;
+					};
+					B0BFE03D215D1C1500E59606 = {
+						CreatedOnToolsVersion = 9.0;
+						ProvisioningStyle = Automatic;
+						TestTargetID = B0BFE01A215D1C1400E59606;
+					};
+				};
+			};
+			buildConfigurationList = B0BFE016215D1C1400E59606 /* Build configuration list for PBXProject "ShiftPickerView" */;
+			compatibilityVersion = "Xcode 8.0";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = B0BFE012215D1C1400E59606;
+			productRefGroup = B0BFE01C215D1C1400E59606 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				B0BFE01A215D1C1400E59606 /* ShiftPickerView */,
+				B0BFE032215D1C1500E59606 /* ShiftPickerViewTests */,
+				B0BFE03D215D1C1500E59606 /* ShiftPickerViewUITests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		B0BFE019215D1C1400E59606 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				B0BFE02B215D1C1400E59606 /* LaunchScreen.storyboard in Resources */,
+				B0BFE028215D1C1400E59606 /* Assets.xcassets in Resources */,
+				B0BFE026215D1C1400E59606 /* Main.storyboard in Resources */,
+				B0BFE05A215D2AA200E59606 /* MHPickerViewCell.xib in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		B0BFE031215D1C1500E59606 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		B0BFE03C215D1C1500E59606 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		3911008617CB35A29EFC8C3E /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-ShiftPickerViewTests-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		3BCD617C2FDBBA1041D9A29C /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-ShiftPickerViewUITests-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		5D1E4DE631F9D6B8176A82CB /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-ShiftPickerView-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		B0BFE017215D1C1400E59606 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				B0BFE023215D1C1400E59606 /* ViewController.m in Sources */,
+				B0BFE059215D2AA200E59606 /* MHPickerViewCell.m in Sources */,
+				B0BFE02E215D1C1400E59606 /* main.m in Sources */,
+				B0BFE055215D280F00E59606 /* MHFlowLayout.m in Sources */,
+				1B3951C4215DC76E00429D63 /* CardFlowViewController.m in Sources */,
+				B0BFE020215D1C1400E59606 /* AppDelegate.m in Sources */,
+				1B3951C1215DB9F600429D63 /* MHFlowCardLayout.m in Sources */,
+				B0BFE052215D1C3A00E59606 /* ShiftPickerView.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		B0BFE02F215D1C1500E59606 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				B0BFE038215D1C1500E59606 /* ShiftPickerViewTests.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		B0BFE03A215D1C1500E59606 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				B0BFE043215D1C1500E59606 /* ShiftPickerViewUITests.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		B0BFE035215D1C1500E59606 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = B0BFE01A215D1C1400E59606 /* ShiftPickerView */;
+			targetProxy = B0BFE034215D1C1500E59606 /* PBXContainerItemProxy */;
+		};
+		B0BFE040215D1C1500E59606 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = B0BFE01A215D1C1400E59606 /* ShiftPickerView */;
+			targetProxy = B0BFE03F215D1C1500E59606 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		B0BFE024215D1C1400E59606 /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				B0BFE025215D1C1400E59606 /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		B0BFE029215D1C1400E59606 /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				B0BFE02A215D1C1400E59606 /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		B0BFE045215D1C1500E59606 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 11.0;
+				MTL_ENABLE_DEBUG_INFO = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+			};
+			name = Debug;
+		};
+		B0BFE046215D1C1500E59606 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 11.0;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				SDKROOT = iphoneos;
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		B0BFE048215D1C1500E59606 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = A64CB308E9255D3094C372B2 /* Pods-ShiftPickerView.debug.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = KU57X2B64P;
+				INFOPLIST_FILE = ShiftPickerView/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = MengHeng.ShiftPickerView;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		B0BFE049215D1C1500E59606 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 2D3C0BFE6DAFD87AFC9234E4 /* Pods-ShiftPickerView.release.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = KU57X2B64P;
+				INFOPLIST_FILE = ShiftPickerView/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = MengHeng.ShiftPickerView;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
+		B0BFE04B215D1C1500E59606 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 79BA935FC8C4ABB302052326 /* Pods-ShiftPickerViewTests.debug.xcconfig */;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = KU57X2B64P;
+				INFOPLIST_FILE = ShiftPickerViewTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = MengHeng.ShiftPickerViewTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/ShiftPickerView.app/ShiftPickerView";
+			};
+			name = Debug;
+		};
+		B0BFE04C215D1C1500E59606 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 4C968A5A39A803636D52FBCE /* Pods-ShiftPickerViewTests.release.xcconfig */;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = KU57X2B64P;
+				INFOPLIST_FILE = ShiftPickerViewTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = MengHeng.ShiftPickerViewTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/ShiftPickerView.app/ShiftPickerView";
+			};
+			name = Release;
+		};
+		B0BFE04E215D1C1500E59606 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 7367D527D7C79FA2193EB143 /* Pods-ShiftPickerViewUITests.debug.xcconfig */;
+			buildSettings = {
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = KU57X2B64P;
+				INFOPLIST_FILE = ShiftPickerViewUITests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = MengHeng.ShiftPickerViewUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = ShiftPickerView;
+			};
+			name = Debug;
+		};
+		B0BFE04F215D1C1500E59606 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = E684050541B823B0A4D3A0EA /* Pods-ShiftPickerViewUITests.release.xcconfig */;
+			buildSettings = {
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = KU57X2B64P;
+				INFOPLIST_FILE = ShiftPickerViewUITests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = MengHeng.ShiftPickerViewUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = ShiftPickerView;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		B0BFE016215D1C1400E59606 /* Build configuration list for PBXProject "ShiftPickerView" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				B0BFE045215D1C1500E59606 /* Debug */,
+				B0BFE046215D1C1500E59606 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		B0BFE047215D1C1500E59606 /* Build configuration list for PBXNativeTarget "ShiftPickerView" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				B0BFE048215D1C1500E59606 /* Debug */,
+				B0BFE049215D1C1500E59606 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		B0BFE04A215D1C1500E59606 /* Build configuration list for PBXNativeTarget "ShiftPickerViewTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				B0BFE04B215D1C1500E59606 /* Debug */,
+				B0BFE04C215D1C1500E59606 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		B0BFE04D215D1C1500E59606 /* Build configuration list for PBXNativeTarget "ShiftPickerViewUITests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				B0BFE04E215D1C1500E59606 /* Debug */,
+				B0BFE04F215D1C1500E59606 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = B0BFE013215D1C1400E59606 /* Project object */;
+}
