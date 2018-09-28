@@ -47,8 +47,7 @@
 
 - (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath{
     
-    [self.navigationController pushViewController:[CardFlowViewController new] animated:YES];
-    
+        [self.navigationController pushViewController:[CardFlowViewController new] animated:YES];
 }
 
 

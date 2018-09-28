@@ -8,21 +8,50 @@
 
 #import "CardFlowViewController.h"
 #import "ShiftPickerView.h"
-@interface CardFlowViewController ()
-
+@interface CardFlowViewController ()<MHShiftPickerViewDatasource>
+@property  (nonatomic, nonnull,strong) NSMutableArray *dataArray;
 @end
 
 @implementation CardFlowViewController
+
+-(NSMutableArray*)dataArray{
+    if (!_dataArray) {
+        _dataArray = [NSMutableArray arrayWithObjects:@"全部",@"附近",@"智能", nil];
+    }
+    
+    return _dataArray;
+}
+
 
 - (void)viewDidLoad {
     [super viewDidLoad];
     self.title = @"卡片式";
     self.view.backgroundColor = [UIColor whiteColor];
-    ShiftPickerView *view = [[ShiftPickerView alloc] initWithFrame:CGRectMake(0, 64, self.view.frame.size.width, 200)];
+    ShiftPickerView *view = [[ShiftPickerView alloc] initWithFrame:CGRectMake(0, 64, self.view.frame.size.width, 50)];
+    view.type = MHFlowTypeFlow;
+    view.dataSource = self;
+    
+    
     view.dataArray= @[@"wdf",@"werfdsdf",@"wefg",@"wefg",@"wefg",@"wefg",@"wefg",@"wefg",@"wefg",@"wefg",@"wefg",@"wefg"];
     [self.view addSubview:view];
     
 }
+
+#pragma mark MHShiftPickerViewDatasource
+-(NSInteger)numberOfTheColumn:(ShiftPickerView *)menuView{
+    return self.dataArray.count;
+}
+
+-(NSInteger)menu:(ShiftPickerView *)menuView numberOfTheRowInColumns:(NSInteger)column{
+    
+    return 10;
+}
+
+-(NSString*)menu:(ShiftPickerView *)menuView titleInColumns:(NSInteger)column{
+    return self.dataArray[column];
+}
+
+
 
 /*
 #pragma mark - Navigation
