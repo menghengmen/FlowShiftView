@@ -32,7 +32,7 @@
     view.dataSource = self;
     
     
-    view.dataArray= @[@"wdf",@"werfdsdf",@"wefg",@"wefg",@"wefg",@"wefg",@"wefg",@"wefg",@"wefg",@"wefg",@"wefg",@"wefg"];
+    view.dataArray= @[@"打卡呈现出现在重新操作 车车现场现场",@"没",@"大神啊大",@"防盗门个，地方",@"卡拉曼达",@"个人，个人个；二，个人报名v",@"哈哈",@"wVC【评论",@"热密封",@" 佛克润发热",@"w反而发客人",@"VC想，吗不想吃"];
     [self.view addSubview:view];
     
 }
@@ -44,7 +44,7 @@
 
 -(NSInteger)menu:(ShiftPickerView *)menuView numberOfTheRowInColumns:(NSInteger)column{
     
-    return 10;
+    return self.dataArray.count;
 }
 
 -(NSString*)menu:(ShiftPickerView *)menuView titleInColumns:(NSInteger)column{

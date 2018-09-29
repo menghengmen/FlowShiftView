@@ -36,6 +36,7 @@
         _collectionView.backgroundColor = [UIColor whiteColor];
         _collectionView.delegate =self;
         _collectionView.dataSource = self;
+        _collectionView.allowsMultipleSelection = YES;
         [_collectionView registerClass:[MHPickerViewCell class] forCellWithReuseIdentifier:@"MHPickerViewCell"];
     }
     
@@ -138,7 +139,6 @@
     if (isShow == YES) {
         [self.window addSubview:background];
         [background addSubview:self.collectionView];
-
         [background mas_makeConstraints:^(MASConstraintMaker *make) {
             CGRect rect = [weakSelf convertRect:weakSelf.bounds toView:weakSelf.window];
             make.top.mas_equalTo(CGRectGetMaxY(rect));
@@ -149,8 +149,7 @@
             make.height.mas_equalTo(400);
         }];
         [background addSubview:self.bottomView];
-        [background layoutIfNeeded];
-        [UIView animateWithDuration:1
+        [UIView animateWithDuration:0
                          animations:^{
                              background.backgroundColor = [UIColor colorWithWhite:0.0 alpha:0.3];
 
@@ -191,12 +190,9 @@
 
 - (CGSize)collectionView:(UICollectionView *)collectionView layout:(UICollectionViewLayout *)collectionViewLayout sizeForItemAtIndexPath:(NSIndexPath *)indexPath{
     NSString *titleStr = self.dataArray[indexPath.row];
-    if (self.type == MHFlowTypeCard) {
-        return CGSizeMake(160, 160);
-    } else {
-        return CGSizeMake([self mh_stringSizeWithFont:[UIFont systemFontOfSize:13.0] str:titleStr maxWidth:10000 maxHeight:30].width +30, 30);
+    return CGSizeMake([self mh_stringSizeWithFont:[UIFont systemFontOfSize:17.0] str:titleStr maxWidth:ScreenWidth maxHeight:30].width +30, 30);
         
-    }
+    
 }
 
 - (CGSize)mh_stringSizeWithFont:(UIFont *)font str:(NSString*)str maxWidth:(CGFloat)maxWidth maxHeight:(CGFloat)maxHeight
@@ -207,4 +203,11 @@
     return [str boundingRectWithSize:maxSize options:NSStringDrawingTruncatesLastVisibleLine | NSStringDrawingUsesLineFragmentOrigin | NSStringDrawingUsesFontLeading attributes:attr context:nil].size;
     
 }
+
+-(void)collectionView:(UICollectionView *)collectionView didSelectItemAtIndexPath:(NSIndexPath *)indexPath{
+    [self.dalegate menu:self didSelectRowAtIndexPath:indexPath.item];
+}
+
+
+
 @end
