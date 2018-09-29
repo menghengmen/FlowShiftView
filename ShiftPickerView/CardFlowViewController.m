@@ -76,7 +76,6 @@
 
 -(void)menu:(ShiftPickerView *)menuView didSelectRowAtIndexPaths:(NSArray *)indexPaths withColumn:(NSInteger)column{
     for (NSIndexPath *index in indexPaths) {
-        
         NSLog(@"%@", self.dataArray[column][(long)index.row ]);
     }
     

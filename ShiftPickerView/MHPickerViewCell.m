@@ -9,7 +9,6 @@
 #import "MHPickerViewCell.h"
 #import <Masonry/Masonry.h>
 #define WS(weakSelf)      __weak typeof(self) weakSelf = self
-#define MHRGBAColor(r, g, b, a) [UIColor colorWithRed:(r)/255.0 green:(r)/255.0 blue:(r)/255.0 alpha:a]
 
 @interface MHPickerViewCell()
 
@@ -32,7 +31,8 @@
     self.label.layer.cornerRadius = 5;
     self.label.layer.masksToBounds = YES;
     self.label.textAlignment = NSTextAlignmentCenter;
-    self.label.backgroundColor = [UIColor lightGrayColor];
+    self.label.layer.borderWidth = 1;
+    self.label.layer.borderColor = [UIColor lightGrayColor].CGColor;
     [self addSubview:self.label];
     [_label mas_makeConstraints:^(MASConstraintMaker *make) {
         make.edges.equalTo(weakSelf);
@@ -47,7 +47,7 @@
 
 -(void)setSelected:(BOOL)selected{
     [super setSelected:selected];
-    _label.backgroundColor = selected?MHRGBAColor(43, 100, 255, 1) :[UIColor lightGrayColor];
+    _label.backgroundColor = selected? [UIColor colorWithRed:(86)/255.0 green:(178)/255.0 blue:166/255.0 alpha:1] :[UIColor whiteColor];
     _label.textColor = selected?[UIColor whiteColor] :[UIColor blackColor];
     
 }
