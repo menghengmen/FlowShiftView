@@ -26,9 +26,9 @@
 @property (nonatomic, strong) UIWindow *window;//
 @property (nonatomic, strong) UIView *bottomView;///底部视图
 @property (nonatomic, assign) BOOL   isShow;///是否打开
-
 @end
 
+typedef void(^MHShiftPickerViewAnimationCompleteHnadle)(void);///回调
 @implementation ShiftPickerView
 
 #pragma mark lazy init
@@ -62,7 +62,7 @@
     if (!_bottomView) {
         _bottomView = [UIView new];
         _bottomView.backgroundColor = [UIColor whiteColor];
-        _bottomView.frame = CGRectMake(0, 350, ScreenWidth, 50);
+        _bottomView.frame = CGRectMake(0, 0, ScreenWidth, 50);
         
         UIButton *resetBtn = [[UIButton alloc] initWithFrame:CGRectMake(0, 0, ScreenWidth/2, 50)];
         [resetBtn addTarget:self action:@selector(resetData) forControlEvents:UIControlEventTouchUpInside];
@@ -123,7 +123,9 @@
 #pragma mark Action
 -(void)sureData{
     [self.delegate menu:self didSelectRowAtIndexPaths:self.collectionView.indexPathsForSelectedItems withColumn:self.currentSelectedColumn];
-    [self animationWithButton:nil backgroundView:self.backgroundViewBtn collection:self.collectionView isShow:NO];
+    [self animationWithButton:nil backgroundView:self.backgroundViewBtn collection:self.collectionView isShow:NO complete:^{
+        
+    }];
     
 }
 
@@ -135,7 +137,7 @@
 
 ///dismiss
 -(void)backgroundViewDidTap{
-    [self animationWithButton:nil backgroundView:self.backgroundViewBtn collection:self.collectionView isShow:NO];
+    [self animationWithButton:nil backgroundView:self.backgroundViewBtn collection:self.collectionView isShow:NO complete:nil];
 }
 ///弹出
 -(void)titleButtonDidClick:(UIButton*)sender{
@@ -143,17 +145,22 @@
     self.currentSelectedColumn = sender.tag -ButtonTag;
     sender.selected = YES;
 
-    [self animationWithButton:sender backgroundView:self.backgroundViewBtn collection:self.collectionView isShow:YES];
+    [self animationWithButton:sender backgroundView:self.backgroundViewBtn collection:self.collectionView isShow:YES complete:^{
+        
+    }];
 }
 
 #pragma matk AnimationMethod
 -(void)animationWithButton:(UIButton*)btn backgroundView:(UIView*)backgroundView
-                collection:(UICollectionView*)collectionView isShow:(BOOL)isShow{
-    [self animationWithBackground:backgroundView isShow:isShow];
+                collection:(UICollectionView*)collectionView isShow:(BOOL)isShow complete:(MHShiftPickerViewAnimationCompleteHnadle)complete{
+    WS(weakSelf);
+    [self animationWithBackground:backgroundView isShow:isShow complete:^{
+        [weakSelf animationWithCollection:collectionView isShow:isShow complete:nil];
+    }];
     
 }
 
--(void)animationWithBackground:(UIView*)background isShow:(BOOL)isShow{
+-(void)animationWithBackground:(UIView*)background isShow:(BOOL)isShow complete:(MHShiftPickerViewAnimationCompleteHnadle)complete{
     WS(weakSelf);
 
     if (isShow == YES) {
@@ -164,11 +171,11 @@
             make.top.mas_equalTo(CGRectGetMaxY(rect));
             make.left.right.bottom.equalTo(weakSelf.window);
         }];
-        [self.collectionView mas_makeConstraints:^(MASConstraintMaker *make) {
-            make.top.left.right.equalTo(background);
-            make.height.mas_equalTo(400);
+        [self.collectionView mas_remakeConstraints:^(MASConstraintMaker *make) {
+            make.top.left.right.equalTo(weakSelf.backgroundViewBtn);
+            make.height.mas_equalTo(0);
         }];
-        [background addSubview:self.bottomView];
+        [background layoutIfNeeded];///刷新视图，不然拿不到最新的
         [UIView animateWithDuration:0
                          animations:^{
                              background.backgroundColor = [UIColor colorWithWhite:0.0 alpha:0.1];
@@ -185,8 +192,38 @@
         
         
     }
+    if (complete) {
+        complete();
+    }
     
+}
+
+///回调方法
+-(void)animationWithCollection:(UICollectionView*)collection isShow:(BOOL)isShow complete:(MHShiftPickerViewAnimationCompleteHnadle)complete{
+
+    if (isShow) {
+        CGFloat collectionViewHeight = 0.f;
+
+        NSUInteger numberOfItems = [collection numberOfItemsInSection:0];
+        MHPickerViewCell *cell = [collection dequeueReusableCellWithReuseIdentifier:@"MHPickerViewCell" forIndexPath:[NSIndexPath indexPathForRow:numberOfItems - 1 inSection:0]];///最后一个cell
+        collectionViewHeight = cell.frame.origin.y + 30 +50 ;//30 cell的高度 50 底部视图的高度
+      
+        
+        
+        [UIView animateWithDuration:0 animations:^{
+            [collection mas_updateConstraints:^(MASConstraintMaker *make) {
+                make.height.mas_equalTo(collectionViewHeight);
+            }];
+            [collection.superview addSubview:self.bottomView];
+        } completion:^(BOOL finished) {
+            self.bottomView.center = CGPointMake(ScreenWidth/2, CGRectGetMaxY(self.collectionView.frame)-25);
+
+        }];
+        
+    }
     
+
+
 }
 
 
