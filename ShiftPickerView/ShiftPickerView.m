@@ -13,6 +13,8 @@
 #import  <Masonry/Masonry.h>
 
 #define  ScreenWidth  [[UIScreen mainScreen] bounds].size.width
+#define  ScreenHeight  [[UIScreen mainScreen] bounds].size.height
+
 #define WS(weakSelf)      __weak typeof(self) weakSelf = self
 #define ButtonTag  10086
 @interface ShiftPickerView()<UICollectionViewDelegate,UICollectionViewDataSource>
@@ -173,7 +175,7 @@ typedef void(^MHShiftPickerViewAnimationCompleteHnadle)(void);///回调
         }];
         [self.collectionView mas_remakeConstraints:^(MASConstraintMaker *make) {
             make.top.left.right.equalTo(weakSelf.backgroundViewBtn);
-            make.height.mas_equalTo(0);
+            make.height.mas_equalTo(0.f);
         }];
         [background layoutIfNeeded];///刷新视图，不然拿不到最新的
         [UIView animateWithDuration:0
@@ -207,21 +209,26 @@ typedef void(^MHShiftPickerViewAnimationCompleteHnadle)(void);///回调
         NSUInteger numberOfItems = [collection numberOfItemsInSection:0];
         MHPickerViewCell *cell = [collection dequeueReusableCellWithReuseIdentifier:@"MHPickerViewCell" forIndexPath:[NSIndexPath indexPathForRow:numberOfItems - 1 inSection:0]];///最后一个cell
         collectionViewHeight = cell.frame.origin.y + 30 +50 ;//30 cell的高度 50 底部视图的高度
-      
-        
-        
+        ///设置最大高度，否则超出屏幕外不能滚动
+        if (collectionViewHeight >ScreenHeight-100) {
+            collectionViewHeight = ScreenHeight-100;
+        }
+       
         [UIView animateWithDuration:0 animations:^{
             [collection mas_updateConstraints:^(MASConstraintMaker *make) {
                 make.height.mas_equalTo(collectionViewHeight);
             }];
-            [collection.superview addSubview:self.bottomView];
+            [collection.superview layoutIfNeeded];
         } completion:^(BOOL finished) {
             self.bottomView.center = CGPointMake(ScreenWidth/2, CGRectGetMaxY(self.collectionView.frame)-25);
+            [collection.superview addSubview:self.bottomView];
 
         }];
         
     }
-    
+    if (complete) {
+        complete();
+    }
 
 
 }
