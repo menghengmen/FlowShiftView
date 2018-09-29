@@ -9,18 +9,32 @@
 #import "CardFlowViewController.h"
 #import "ShiftPickerView.h"
 @interface CardFlowViewController ()<MHShiftPickerViewDatasource>
-@property  (nonatomic, nonnull,strong) NSMutableArray *dataArray;
+@property  (nonatomic, nonnull,strong) NSMutableArray *titleArray;
+@property  (nonatomic,nonnull,strong)  NSMutableArray *dataArray;
 @end
 
 @implementation CardFlowViewController
 
--(NSMutableArray*)dataArray{
-    if (!_dataArray) {
-        _dataArray = [NSMutableArray arrayWithObjects:@"全部",@"附近",@"智能", nil];
+-(NSMutableArray*)titleArray{
+    if (!_titleArray) {
+        _titleArray = [NSMutableArray arrayWithObjects:@"全部",@"附近",@"智能", nil];
     }
     
-    return _dataArray;
+    return _titleArray;
 }
+
+-(NSMutableArray*)dataArray{
+    if (!_dataArray) {
+        NSArray *allArr = @[@"全部",@"甜点饮品",@"生日蛋糕",@"火锅",@"自助餐",@"日韩料理"];
+        NSArray *nearlyArr = @[@"1km",@"1km--5km",@"生日蛋糕",@"火锅",@"自助餐",@"日韩料理"];
+        NSArray *teliarr = @[@"打卡呈现出现在重新操作 车车现场现场",@"没",@"大神啊大",@"防盗门个，地方",@"卡拉曼达",@"个人，个人个；二，个人报名v",@"哈哈",@"wVC【评论",@"热密封",@" 佛克润发热",@"w反而发客人",@"VC想，吗不想吃",@"打卡呈现出现在重新操作 车车现场现场",@"没",@"大神啊大"];
+
+        _dataArray = [NSMutableArray arrayWithObjects:allArr,nearlyArr,teliarr,nil];
+    }
+    return _dataArray;
+    
+}
+
 
 
 - (void)viewDidLoad {
@@ -30,25 +44,27 @@
     ShiftPickerView *view = [[ShiftPickerView alloc] initWithFrame:CGRectMake(0, 64, self.view.frame.size.width, 50)];
     view.type = MHFlowTypeFlow;
     view.dataSource = self;
-    
-    
-    view.dataArray= @[@"打卡呈现出现在重新操作 车车现场现场",@"没",@"大神啊大",@"防盗门个，地方",@"卡拉曼达",@"个人，个人个；二，个人报名v",@"哈哈",@"wVC【评论",@"热密封",@" 佛克润发热",@"w反而发客人",@"VC想，吗不想吃"];
     [self.view addSubview:view];
     
 }
 
 #pragma mark MHShiftPickerViewDatasource
 -(NSInteger)numberOfTheColumn:(ShiftPickerView *)menuView{
-    return self.dataArray.count;
+    return self.titleArray.count;
 }
 
 -(NSInteger)menu:(ShiftPickerView *)menuView numberOfTheRowInColumns:(NSInteger)column{
     
-    return self.dataArray.count;
+    return [self.dataArray[column] count];
+}
+
+-(NSString*)menu:(ShiftPickerView *)menuView titleForAtIndexPath:(NSIndexPath *)indexPath forInColumn:(NSInteger)column{
+    
+    return self.dataArray[column][indexPath.row];
 }
 
 -(NSString*)menu:(ShiftPickerView *)menuView titleInColumns:(NSInteger)column{
-    return self.dataArray[column];
+    return self.titleArray[column];
 }
 
 
