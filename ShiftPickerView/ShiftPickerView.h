@@ -26,6 +26,8 @@ typedef NS_ENUM(NSUInteger,MHFlowType) {
 @protocol MHShiftPickerViewDelegate <NSObject>
 @optional
 -(void)menu:(ShiftPickerView*)menuView didSelectRowAtIndexPath:(NSInteger)indexPath;///单选
+-(void)menu:(ShiftPickerView*)menuView didSelectRowAtIndexPaths:(NSArray*)indexPaths withColumn:(NSInteger)column;///多选
+
 
 @end
 
@@ -33,7 +35,7 @@ typedef NS_ENUM(NSUInteger,MHFlowType) {
 @interface ShiftPickerView : UIView
 @property   (nonatomic,assign)   MHFlowType type;
 @property   (nonatomic,weak,nullable)  id<MHShiftPickerViewDatasource>dataSource;
-@property   (nonatomic,weak,nullable)  id<MHShiftPickerViewDelegate>dalegate;
+@property   (nonatomic,weak,nullable)  id<MHShiftPickerViewDelegate>delegate;
 
 -(instancetype)initWithFrame:(CGRect)frame;
 @end

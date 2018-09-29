@@ -65,12 +65,15 @@
         _bottomView.frame = CGRectMake(0, 350, ScreenWidth, 50);
         
         UIButton *resetBtn = [[UIButton alloc] initWithFrame:CGRectMake(0, 0, ScreenWidth/2, 50)];
+        [resetBtn addTarget:self action:@selector(resetData) forControlEvents:UIControlEventTouchUpInside];
         [resetBtn setTitle:@"重置" forState:UIControlStateNormal];
         resetBtn.backgroundColor = [UIColor lightGrayColor];
         [_bottomView addSubview:resetBtn];
         
         UIButton *sureBtn = [[UIButton alloc] initWithFrame:CGRectMake(ScreenWidth/2, 0, ScreenWidth/2, 50)];
         [sureBtn setTitle:@"确定" forState:UIControlStateNormal];
+        [sureBtn addTarget:self action:@selector(sureData) forControlEvents:UIControlEventTouchUpInside];
+
         sureBtn.backgroundColor = [UIColor greenColor];
         [_bottomView addSubview:sureBtn];
         
@@ -118,13 +121,22 @@
 }
 
 #pragma mark Action
+-(void)sureData{
+    [self.delegate menu:self didSelectRowAtIndexPaths:self.collectionView.indexPathsForSelectedItems withColumn:self.currentSelectedColumn];
+    [self animationWithButton:nil backgroundView:self.backgroundViewBtn collection:self.collectionView isShow:NO];
+    
+}
+
+-(void)resetData{
+    
+    
+    
+}
+
 ///dismiss
 -(void)backgroundViewDidTap{
     [self animationWithButton:nil backgroundView:self.backgroundViewBtn collection:self.collectionView isShow:NO];
 }
-
-
-
 ///弹出
 -(void)titleButtonDidClick:(UIButton*)sender{
     [self.collectionView reloadData];
@@ -201,6 +213,10 @@
     
 }
 
+-(void)collectionView:(UICollectionView *)collectionView didSelectItemAtIndexPath:(NSIndexPath *)indexPath{
+    [self.delegate menu:self didSelectRowAtIndexPath:indexPath.item];
+}
+
 - (CGSize)mh_stringSizeWithFont:(UIFont *)font str:(NSString*)str maxWidth:(CGFloat)maxWidth maxHeight:(CGFloat)maxHeight
 {
     NSMutableDictionary *attr = [NSMutableDictionary dictionary];
@@ -210,8 +226,6 @@
     
 }
 
--(void)collectionView:(UICollectionView *)collectionView didSelectItemAtIndexPath:(NSIndexPath *)indexPath{
-    [self.dalegate menu:self didSelectRowAtIndexPath:indexPath.item];
-}
+
 
 @end
