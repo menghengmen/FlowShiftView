@@ -19,6 +19,8 @@
 @property (nonatomic,strong)  MHFlowLayout *mhFlowLayout;
 
 @property (nonatomic,strong) UICollectionView *collectionView;
+@property (nonatomic,strong) UIButton *backGroundViewButton;
+
 @end
 
 @implementation SideView
@@ -26,17 +28,29 @@
 -(instancetype)initWithFrame:(CGRect)frame{
     self = [super initWithFrame:frame];
     if (self) {
+        [self addSubview:self.backGroundViewButton];
         [self addSubview:self.collectionView];
     }
     
     return self;
+}
+
+-(UIButton*)backGroundViewButton{
+    if (!_backGroundViewButton) {
+        _backGroundViewButton = [[UIButton alloc] initWithFrame:CGRectMake(0, 0, ScreenWidth, ScreenHeight)];
+        _backGroundViewButton.backgroundColor = [UIColor colorWithWhite:0 alpha:0.1];
+        [_backGroundViewButton addTarget:self action:@selector(backClick) forControlEvents:UIControlEventTouchUpInside];
+    }
+    
+    return _backGroundViewButton;
+    
 }
 -(UICollectionView*)collectionView{
     if (!_collectionView) {
         self.mhFlowLayout = [[MHFlowLayout alloc] initWithType:MHCollectViewAlignLeft];
         self.mhFlowLayout.sectionInset = UIEdgeInsetsMake(10, 10, 10, 40);
         self.mhFlowLayout.headerReferenceSize = CGSizeMake(self.frame.size.width, 30);//区头大小
-        _collectionView = [[UICollectionView alloc] initWithFrame:self.frame collectionViewLayout:self.mhFlowLayout];
+        _collectionView = [[UICollectionView alloc] initWithFrame:CGRectMake(80, 0, ScreenWidth-80, ScreenHeight) collectionViewLayout:self.mhFlowLayout];
         _collectionView.delegate =self;
         _collectionView.dataSource = self;
         _collectionView.backgroundColor = [UIColor whiteColor];
@@ -49,6 +63,18 @@
     return _collectionView;
     
 }
+
+#pragma  mark Action
+-(void)backClick{
+    [UIView animateWithDuration:1
+                     animations:^{
+        self.frame = CGRectMake(ScreenWidth, 0, 0, ScreenHeight);
+
+    }];
+    
+    
+}
+
 
 #pragma mark UICollectionViewDataSource
 -(NSInteger)numberOfSectionsInCollectionView:(UICollectionView *)collectionView{

@@ -45,7 +45,7 @@
     // Do any additional setup after loading the view from its nib.
 }
 - (IBAction)drag:(UIButton *)sender {
-    SideView *side = [[SideView alloc] initWithFrame:CGRectMake(40, 0, ScreenWidth-40, ScreenHeight)];
+    SideView *side = [[SideView alloc] initWithFrame:CGRectMake(0, 0, ScreenWidth, ScreenHeight)];
     side.dataSource = self;
     [self.view addSubview:side];
 //    [UIView animateWithDuration:1

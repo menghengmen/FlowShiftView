@@ -90,7 +90,7 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "ShiftPickerView/&#x4fa7;&#x6ed1;&#x7b5b;&#x9009;/SideHeadReusableView.m"
-            timestampString = "559991789.161494"
+            timestampString = "559993007.959079"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
             startingLineNumber = "15"
@@ -106,12 +106,28 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "ShiftPickerView/&#x4fa7;&#x6ed1;&#x7b5b;&#x9009;/SideHeadReusableView.m"
-            timestampString = "559991789.161579"
+            timestampString = "559993007.959174"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
             startingLineNumber = "22"
             endingLineNumber = "22"
             landmarkName = "-config"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "ShiftPickerView/&#x4fa7;&#x6ed1;&#x7b5b;&#x9009;/SideView.m"
+            timestampString = "559993007.9592479"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "42"
+            endingLineNumber = "42"
+            landmarkName = "-backGroundViewButton"
             landmarkType = "7">
          </BreakpointContent>
       </BreakpointProxy>
