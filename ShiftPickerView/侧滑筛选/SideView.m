@@ -34,11 +34,13 @@
 -(UICollectionView*)collectionView{
     if (!_collectionView) {
         self.mhFlowLayout = [[MHFlowLayout alloc] initWithType:MHCollectViewAlignLeft];
-        self.mhFlowLayout.sectionInset = UIEdgeInsetsMake(10, 10, 10, 10);
+        self.mhFlowLayout.sectionInset = UIEdgeInsetsMake(10, 10, 10, 40);
+        self.mhFlowLayout.headerReferenceSize = CGSizeMake(self.frame.size.width, 30);//区头大小
         _collectionView = [[UICollectionView alloc] initWithFrame:self.frame collectionViewLayout:self.mhFlowLayout];
         _collectionView.delegate =self;
         _collectionView.dataSource = self;
-        _collectionView.backgroundColor = [UIColor lightGrayColor];
+        _collectionView.backgroundColor = [UIColor whiteColor];
+        _collectionView.allowsMultipleSelection = YES;
         [_collectionView registerClass:[MHPickerViewCell class] forCellWithReuseIdentifier:@"MHPickerViewCell"];
    
         [_collectionView registerClass:[SideHeadReusableView class] forSupplementaryViewOfKind:UICollectionElementKindSectionHeader withReuseIdentifier:@"SideHeadReusableView"];
@@ -60,7 +62,6 @@
 
 - (__kindof UICollectionViewCell *)collectionView:(UICollectionView *)collectionView cellForItemAtIndexPath:(NSIndexPath *)indexPath{
     MHPickerViewCell *cell = [collectionView dequeueReusableCellWithReuseIdentifier:@"MHPickerViewCell" forIndexPath:indexPath];
-    cell.backgroundColor = [UIColor greenColor];
     cell.contentString = [self.dataSource sideView:self titleForRow:indexPath];
     return cell;
 }
@@ -68,7 +69,7 @@
 -(UICollectionReusableView*)collectionView:(UICollectionView *)collectionView viewForSupplementaryElementOfKind:(NSString *)kind atIndexPath:(NSIndexPath *)indexPath{
     if (kind == UICollectionElementKindSectionHeader) {
         SideHeadReusableView *reuseView = [collectionView dequeueReusableSupplementaryViewOfKind:UICollectionElementKindSectionHeader withReuseIdentifier:@"SideHeadReusableView" forIndexPath:indexPath];
-        reuseView.titleLabel.text = [self.dataSource sideView:self titleForSection:indexPath.row];
+        reuseView.titleLabel.text = [self.dataSource sideView:self titleForSection:indexPath.section];
         return  reuseView;
     } else {
        
@@ -80,6 +81,14 @@
 - (CGSize)collectionView:(UICollectionView *)collectionView layout:(UICollectionViewLayout *)collectionViewLayout sizeForItemAtIndexPath:(NSIndexPath *)indexPath{
     return CGSizeMake([self mh_stringSizeWithFont:[UIFont systemFontOfSize:17.0] str:[self.dataSource sideView:self titleForRow:indexPath] maxWidth:ScreenWidth maxHeight:30].width +30, 30);
 }
+
+-(void)collectionView:(UICollectionView *)collectionView didSelectItemAtIndexPath:(NSIndexPath *)indexPath{
+    
+    
+}
+
+
+
 - (CGSize)mh_stringSizeWithFont:(UIFont *)font str:(NSString*)str maxWidth:(CGFloat)maxWidth maxHeight:(CGFloat)maxHeight
 {
     NSMutableDictionary *attr = [NSMutableDictionary dictionary];
