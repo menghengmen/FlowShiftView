@@ -229,10 +229,7 @@ typedef void(^MHShiftPickerViewAnimationCompleteHnadle)(void);///回调
     if (complete) {
         complete();
     }
-
-
 }
-
 
 #pragma mark UICollectionDataSource
 - (NSInteger)numberOfSectionsInCollectionView:(UICollectionView *)collectionView
@@ -253,9 +250,7 @@ typedef void(^MHShiftPickerViewAnimationCompleteHnadle)(void);///回调
 - (CGSize)collectionView:(UICollectionView *)collectionView layout:(UICollectionViewLayout *)collectionViewLayout sizeForItemAtIndexPath:(NSIndexPath *)indexPath{
     NSString *titleStr = [self.dataSource menu:self titleForAtIndexPath:indexPath forInColumn:self.currentSelectedColumn];
     return CGSizeMake([self mh_stringSizeWithFont:[UIFont systemFontOfSize:17.0] str:titleStr maxWidth:ScreenWidth maxHeight:30].width +30, 30);
-        
-    
-}
+    }
 
 -(void)collectionView:(UICollectionView *)collectionView didSelectItemAtIndexPath:(NSIndexPath *)indexPath{
     [self.delegate menu:self didSelectRowAtIndexPath:indexPath.item];
@@ -269,7 +264,4 @@ typedef void(^MHShiftPickerViewAnimationCompleteHnadle)(void);///回调
     return [str boundingRectWithSize:maxSize options:NSStringDrawingTruncatesLastVisibleLine | NSStringDrawingUsesLineFragmentOrigin | NSStringDrawingUsesFontLeading attributes:attr context:nil].size;
     
 }
-
-
-
 @end

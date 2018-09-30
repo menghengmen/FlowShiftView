@@ -9,6 +9,11 @@
 /* Begin PBXBuildFile section */
 		1B3951C1215DB9F600429D63 /* MHFlowCardLayout.m in Sources */ = {isa = PBXBuildFile; fileRef = 1B3951C0215DB9F600429D63 /* MHFlowCardLayout.m */; };
 		1B3951C4215DC76E00429D63 /* CardFlowViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 1B3951C3215DC76E00429D63 /* CardFlowViewController.m */; };
+		1B666CC32160AB4F00C8FFEE /* SideView.m in Sources */ = {isa = PBXBuildFile; fileRef = 1B666CC22160AB4F00C8FFEE /* SideView.m */; };
+		1B666CCC2160B68800C8FFEE /* SideViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 1B666CCA2160B68800C8FFEE /* SideViewController.m */; };
+		1B666CCD2160B68800C8FFEE /* SideViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 1B666CCB2160B68800C8FFEE /* SideViewController.xib */; };
+		1B666CD12160C0A300C8FFEE /* SideHeadReusableView.m in Sources */ = {isa = PBXBuildFile; fileRef = 1B666CCF2160C0A300C8FFEE /* SideHeadReusableView.m */; };
+		1B666CD22160C0A300C8FFEE /* SideHeadReusableView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 1B666CD02160C0A300C8FFEE /* SideHeadReusableView.xib */; };
 		28CE2BD2B98B7C19F0EAA993 /* libPods-ShiftPickerViewTests.a in Frameworks */ = {isa = PBXBuildFile; fileRef = BC726E942993F5D117F9B972 /* libPods-ShiftPickerViewTests.a */; };
 		8004F18D12BC11C279861F64 /* libPods-ShiftPickerView.a in Frameworks */ = {isa = PBXBuildFile; fileRef = E2D46EDD5753976C9AAB2F94 /* libPods-ShiftPickerView.a */; };
 		B0BFE020215D1C1400E59606 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = B0BFE01F215D1C1400E59606 /* AppDelegate.m */; };
@@ -48,6 +53,14 @@
 		1B3951C0215DB9F600429D63 /* MHFlowCardLayout.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MHFlowCardLayout.m; sourceTree = "<group>"; };
 		1B3951C2215DC76E00429D63 /* CardFlowViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = CardFlowViewController.h; sourceTree = "<group>"; };
 		1B3951C3215DC76E00429D63 /* CardFlowViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = CardFlowViewController.m; sourceTree = "<group>"; };
+		1B666CC12160AB4F00C8FFEE /* SideView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SideView.h; sourceTree = "<group>"; };
+		1B666CC22160AB4F00C8FFEE /* SideView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SideView.m; sourceTree = "<group>"; };
+		1B666CC92160B68800C8FFEE /* SideViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SideViewController.h; sourceTree = "<group>"; };
+		1B666CCA2160B68800C8FFEE /* SideViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SideViewController.m; sourceTree = "<group>"; };
+		1B666CCB2160B68800C8FFEE /* SideViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = SideViewController.xib; sourceTree = "<group>"; };
+		1B666CCE2160C0A300C8FFEE /* SideHeadReusableView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SideHeadReusableView.h; sourceTree = "<group>"; };
+		1B666CCF2160C0A300C8FFEE /* SideHeadReusableView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SideHeadReusableView.m; sourceTree = "<group>"; };
+		1B666CD02160C0A300C8FFEE /* SideHeadReusableView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = SideHeadReusableView.xib; sourceTree = "<group>"; };
 		2D3C0BFE6DAFD87AFC9234E4 /* Pods-ShiftPickerView.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ShiftPickerView.release.xcconfig"; path = "Pods/Target Support Files/Pods-ShiftPickerView/Pods-ShiftPickerView.release.xcconfig"; sourceTree = "<group>"; };
 		488CF34B0397251BFFCCD07E /* libPods-ShiftPickerViewUITests.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-ShiftPickerViewUITests.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 		4C968A5A39A803636D52FBCE /* Pods-ShiftPickerViewTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ShiftPickerViewTests.release.xcconfig"; path = "Pods/Target Support Files/Pods-ShiftPickerViewTests/Pods-ShiftPickerViewTests.release.xcconfig"; sourceTree = "<group>"; };
@@ -110,6 +123,37 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		1B666CBF2160AA4000C8FFEE /* 下拉筛选 */ = {
+			isa = PBXGroup;
+			children = (
+				B0BFE050215D1C3A00E59606 /* ShiftPickerView.h */,
+				B0BFE051215D1C3A00E59606 /* ShiftPickerView.m */,
+				B0BFE053215D280F00E59606 /* MHFlowLayout.h */,
+				B0BFE054215D280F00E59606 /* MHFlowLayout.m */,
+				1B3951BF215DB9F600429D63 /* MHFlowCardLayout.h */,
+				1B3951C0215DB9F600429D63 /* MHFlowCardLayout.m */,
+				B0BFE056215D2AA200E59606 /* MHPickerViewCell.h */,
+				B0BFE057215D2AA200E59606 /* MHPickerViewCell.m */,
+				B0BFE058215D2AA200E59606 /* MHPickerViewCell.xib */,
+			);
+			path = "下拉筛选";
+			sourceTree = "<group>";
+		};
+		1B666CC02160AA5B00C8FFEE /* 侧滑筛选 */ = {
+			isa = PBXGroup;
+			children = (
+				1B666CC12160AB4F00C8FFEE /* SideView.h */,
+				1B666CC22160AB4F00C8FFEE /* SideView.m */,
+				1B666CC92160B68800C8FFEE /* SideViewController.h */,
+				1B666CCA2160B68800C8FFEE /* SideViewController.m */,
+				1B666CCB2160B68800C8FFEE /* SideViewController.xib */,
+				1B666CCE2160C0A300C8FFEE /* SideHeadReusableView.h */,
+				1B666CCF2160C0A300C8FFEE /* SideHeadReusableView.m */,
+				1B666CD02160C0A300C8FFEE /* SideHeadReusableView.xib */,
+			);
+			path = "侧滑筛选";
+			sourceTree = "<group>";
+		};
 		516A77B101691293240E75C3 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
@@ -158,6 +202,8 @@
 		B0BFE01D215D1C1400E59606 /* ShiftPickerView */ = {
 			isa = PBXGroup;
 			children = (
+				1B666CC02160AA5B00C8FFEE /* 侧滑筛选 */,
+				1B666CBF2160AA4000C8FFEE /* 下拉筛选 */,
 				B0BFE01E215D1C1400E59606 /* AppDelegate.h */,
 				B0BFE01F215D1C1400E59606 /* AppDelegate.m */,
 				B0BFE021215D1C1400E59606 /* ViewController.h */,
@@ -169,15 +215,6 @@
 				B0BFE029215D1C1400E59606 /* LaunchScreen.storyboard */,
 				B0BFE02C215D1C1400E59606 /* Info.plist */,
 				B0BFE02D215D1C1400E59606 /* main.m */,
-				B0BFE050215D1C3A00E59606 /* ShiftPickerView.h */,
-				B0BFE051215D1C3A00E59606 /* ShiftPickerView.m */,
-				B0BFE053215D280F00E59606 /* MHFlowLayout.h */,
-				B0BFE054215D280F00E59606 /* MHFlowLayout.m */,
-				1B3951BF215DB9F600429D63 /* MHFlowCardLayout.h */,
-				1B3951C0215DB9F600429D63 /* MHFlowCardLayout.m */,
-				B0BFE056215D2AA200E59606 /* MHPickerViewCell.h */,
-				B0BFE057215D2AA200E59606 /* MHPickerViewCell.m */,
-				B0BFE058215D2AA200E59606 /* MHPickerViewCell.xib */,
 			);
 			path = ShiftPickerView;
 			sourceTree = "<group>";
@@ -310,8 +347,10 @@
 			buildActionMask = 2147483647;
 			files = (
 				B0BFE02B215D1C1400E59606 /* LaunchScreen.storyboard in Resources */,
+				1B666CCD2160B68800C8FFEE /* SideViewController.xib in Resources */,
 				B0BFE028215D1C1400E59606 /* Assets.xcassets in Resources */,
 				B0BFE026215D1C1400E59606 /* Main.storyboard in Resources */,
+				1B666CD22160C0A300C8FFEE /* SideHeadReusableView.xib in Resources */,
 				B0BFE05A215D2AA200E59606 /* MHPickerViewCell.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -394,13 +433,16 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				1B666CD12160C0A300C8FFEE /* SideHeadReusableView.m in Sources */,
 				B0BFE023215D1C1400E59606 /* ViewController.m in Sources */,
 				B0BFE059215D2AA200E59606 /* MHPickerViewCell.m in Sources */,
 				B0BFE02E215D1C1400E59606 /* main.m in Sources */,
 				B0BFE055215D280F00E59606 /* MHFlowLayout.m in Sources */,
 				1B3951C4215DC76E00429D63 /* CardFlowViewController.m in Sources */,
+				1B666CCC2160B68800C8FFEE /* SideViewController.m in Sources */,
 				B0BFE020215D1C1400E59606 /* AppDelegate.m in Sources */,
 				1B3951C1215DB9F600429D63 /* MHFlowCardLayout.m in Sources */,
+				1B666CC32160AB4F00C8FFEE /* SideView.m in Sources */,
 				B0BFE052215D1C3A00E59606 /* ShiftPickerView.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

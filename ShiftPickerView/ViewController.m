@@ -8,6 +8,7 @@
 
 #import "ViewController.h"
 #import "CardFlowViewController.h"
+#import "SideViewController.h"
 @interface ViewController ()
 @property (strong, nonatomic) IBOutlet UITableView *tableView;
 @property (strong, nonatomic)  NSMutableArray *dataArray;
@@ -18,7 +19,7 @@
 
 -(NSMutableArray *)dataArray{
     if (!_dataArray) {
-        _dataArray = [[NSMutableArray alloc] initWithObjects:@"卡片式",@"标签式", nil];
+        _dataArray = [[NSMutableArray alloc] initWithObjects:@"下拉筛选",@"侧滑筛选", nil];
     }
     return _dataArray;
     
@@ -46,8 +47,14 @@
 }
 
 - (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath{
-    
+    if (indexPath.row ==0) {
         [self.navigationController pushViewController:[CardFlowViewController new] animated:YES];
+
+    } else {
+        [self.navigationController pushViewController:[SideViewController new] animated:YES];
+
+        
+    }
 }
 
 
