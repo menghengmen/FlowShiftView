@@ -89,45 +89,13 @@
             shouldBeEnabled = "Yes"
             ignoreCount = "0"
             continueAfterRunningActions = "No"
-            filePath = "ShiftPickerView/&#x4fa7;&#x6ed1;&#x7b5b;&#x9009;/SideHeadReusableView.m"
-            timestampString = "559993007.959079"
+            filePath = "ShiftPickerView/&#x4fa7;&#x6ed1;&#x7b5b;&#x9009;/SideViewController.m"
+            timestampString = "560426122.322737"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "15"
-            endingLineNumber = "15"
-            landmarkName = "-initWithFrame:"
-            landmarkType = "7">
-         </BreakpointContent>
-      </BreakpointProxy>
-      <BreakpointProxy
-         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
-         <BreakpointContent
-            shouldBeEnabled = "Yes"
-            ignoreCount = "0"
-            continueAfterRunningActions = "No"
-            filePath = "ShiftPickerView/&#x4fa7;&#x6ed1;&#x7b5b;&#x9009;/SideHeadReusableView.m"
-            timestampString = "559993007.959174"
-            startingColumnNumber = "9223372036854775807"
-            endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "22"
-            endingLineNumber = "22"
-            landmarkName = "-config"
-            landmarkType = "7">
-         </BreakpointContent>
-      </BreakpointProxy>
-      <BreakpointProxy
-         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
-         <BreakpointContent
-            shouldBeEnabled = "Yes"
-            ignoreCount = "0"
-            continueAfterRunningActions = "No"
-            filePath = "ShiftPickerView/&#x4fa7;&#x6ed1;&#x7b5b;&#x9009;/SideView.m"
-            timestampString = "559993007.9592479"
-            startingColumnNumber = "9223372036854775807"
-            endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "42"
-            endingLineNumber = "42"
-            landmarkName = "-backGroundViewButton"
+            startingLineNumber = "75"
+            endingLineNumber = "75"
+            landmarkName = "-sideView:didSelectedRowAtIndexpaths:"
             landmarkType = "7">
          </BreakpointContent>
       </BreakpointProxy>

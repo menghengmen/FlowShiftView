@@ -20,12 +20,21 @@
 
 @end
 
+@protocol SideViewDelegate <NSObject>
+
+@optional
+-(void)sideView:(SideView*)sideView didSelectedRowAtIndexpaths:(NSArray*)indexPatns;
+
+@end
+
+
 
 NS_ASSUME_NONNULL_BEGIN
 
 @interface SideView : UIView
 -(instancetype)initWithFrame:(CGRect)frame;
 @property (nonatomic,strong,nullable)  id <SideViewDatasource>dataSource;
+@property (nonatomic,strong,nullable)   id<SideViewDelegate>delegate;
 @end
 
 NS_ASSUME_NONNULL_END

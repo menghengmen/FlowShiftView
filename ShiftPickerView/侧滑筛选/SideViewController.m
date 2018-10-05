@@ -11,7 +11,7 @@
 #define  ScreenWidth  [[UIScreen mainScreen] bounds].size.width
 #define  ScreenHeight  [[UIScreen mainScreen] bounds].size.height
 
-@interface SideViewController ()<SideViewDatasource>
+@interface SideViewController ()<SideViewDatasource,SideViewDelegate>
 @property (nonatomic,strong) SideView  *sideView;
 @property (nonatomic,strong) NSMutableArray *dataArray;
 @property (nonatomic,strong) NSMutableArray *titleArray;
@@ -34,7 +34,7 @@
 
 -(NSMutableArray*)titleArray{
     if (!_titleArray) {
-        _titleArray = [NSMutableArray arrayWithObjects:@"品牌",@"z折扣和服务",@"发货地", nil];
+        _titleArray = [NSMutableArray arrayWithObjects:@"品牌",@"折扣和服务",@"发货地", nil];
     }
     
     return  _titleArray;
@@ -42,17 +42,12 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-    // Do any additional setup after loading the view from its nib.
 }
 - (IBAction)drag:(UIButton *)sender {
     SideView *side = [[SideView alloc] initWithFrame:CGRectMake(0, 0, ScreenWidth, ScreenHeight)];
     side.dataSource = self;
+    side.delegate = self;
     [self.view addSubview:side];
-//    [UIView animateWithDuration:1
-//                     animations:^{
-//                         side.frame = CGRectMake(0, 0, ScreenWidth, ScreenHeight);
-//
-//                     }];
 }
 
 #pragma  mark SideViewDatasource
@@ -73,6 +68,14 @@
 -(NSString*)sideView:(SideView *)sideView titleForRow:(NSIndexPath *)indexPath{
     
     return self.dataArray[indexPath.section][indexPath.row];
+}
+
+#pragma mark SideViewDelegate
+-(void)sideView:(SideView *)sideView didSelectedRowAtIndexpaths:(NSArray *)indexPatns{
+    for (NSIndexPath *path in indexPatns) {
+        NSLog(@"%@",self.dataArray[path.section][path.row]);
+    }
+    
 }
 
 

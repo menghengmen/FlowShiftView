@@ -20,6 +20,7 @@
 
 @property (nonatomic,strong) UICollectionView *collectionView;
 @property (nonatomic,strong) UIButton *backGroundViewButton;
+@property (nonatomic,strong) UIView *bottomView;
 
 @end
 
@@ -30,6 +31,7 @@
     if (self) {
         [self addSubview:self.backGroundViewButton];
         [self addSubview:self.collectionView];
+        [self addSubview:self.bottomView];
     }
     
     return self;
@@ -45,6 +47,32 @@
     return _backGroundViewButton;
     
 }
+
+-(UIView*)bottomView{
+    if (!_bottomView) {
+        _bottomView = [[UIView alloc] initWithFrame:CGRectMake(80, ScreenHeight-80, self.frame.size.width-80, 60)];
+   
+        UIButton *resetBtn = [UIButton buttonWithType:UIButtonTypeCustom];
+        resetBtn.frame = CGRectMake(0, 0,(self.frame.size.width-80)/2, 50);
+        [resetBtn addTarget:self action:@selector(resetData) forControlEvents:UIControlEventTouchUpInside];
+        resetBtn.backgroundColor = [UIColor lightGrayColor];
+        [resetBtn setTitle:@"重置" forState:UIControlStateNormal];
+        [resetBtn setTitleColor:[UIColor whiteColor] forState:UIControlStateNormal];
+        [_bottomView addSubview:resetBtn];
+        
+        UIButton *sureBtn = [[UIButton alloc] initWithFrame:CGRectMake((self.frame.size.width-80)/2, 0, (self.frame.size.width-80)/2, 50)];
+        [sureBtn setTitle:@"确定" forState:UIControlStateNormal];
+        [sureBtn addTarget:self action:@selector(sureData) forControlEvents:UIControlEventTouchUpInside];
+        sureBtn.backgroundColor = [UIColor blueColor];
+        [sureBtn setTitleColor:[UIColor whiteColor] forState:UIControlStateNormal];
+        [_bottomView addSubview:sureBtn];
+    
+    }
+    
+    return _bottomView;
+    
+}
+
 -(UICollectionView*)collectionView{
     if (!_collectionView) {
         self.mhFlowLayout = [[MHFlowLayout alloc] initWithType:MHCollectViewAlignLeft];
@@ -66,13 +94,26 @@
 
 #pragma  mark Action
 -(void)backClick{
+   
+    [self dismiss];
+    
+}
+
+-(void)resetData{
+}
+
+
+-(void)sureData{
+    [self.delegate sideView:self didSelectedRowAtIndexpaths:self.collectionView.indexPathsForSelectedItems];
+    [self dismiss];
+}
+
+-(void)dismiss{
     [UIView animateWithDuration:1
                      animations:^{
-        self.frame = CGRectMake(ScreenWidth, 0, 0, ScreenHeight);
-
-    }];
-    
-    
+                         self.frame = CGRectMake(ScreenWidth, 0, 0, ScreenHeight);
+                         
+                     }];
 }
 
 
@@ -112,8 +153,6 @@
     
     
 }
-
-
 
 - (CGSize)mh_stringSizeWithFont:(UIFont *)font str:(NSString*)str maxWidth:(CGFloat)maxWidth maxHeight:(CGFloat)maxHeight
 {
