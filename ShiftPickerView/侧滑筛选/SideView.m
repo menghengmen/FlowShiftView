@@ -15,6 +15,8 @@
 #define  ScreenHeight  [[UIScreen mainScreen] bounds].size.height
 
 #define WS(weakSelf)      __weak typeof(self) weakSelf = self
+#define HeaderTag  999
+
 @interface SideView()<UICollectionViewDelegate,UICollectionViewDataSource>
 @property (nonatomic,strong)  MHFlowLayout *mhFlowLayout;
 
@@ -50,7 +52,7 @@
 
 -(UIView*)bottomView{
     if (!_bottomView) {
-        _bottomView = [[UIView alloc] initWithFrame:CGRectMake(80, ScreenHeight-80, self.frame.size.width-80, 60)];
+        _bottomView = [[UIView alloc] initWithFrame:CGRectMake(80, ScreenHeight-60, self.frame.size.width-80, 60)];
    
         UIButton *resetBtn = [UIButton buttonWithType:UIButtonTypeCustom];
         resetBtn.frame = CGRectMake(0, 0,(self.frame.size.width-80)/2, 50);
@@ -100,6 +102,7 @@
 }
 
 -(void)resetData{
+
 }
 
 
@@ -123,8 +126,20 @@
 }
 
 - (NSInteger)collectionView:(UICollectionView *)collectionView numberOfItemsInSection:(NSInteger)section{
+    SideHeadReusableView *view= [self.collectionView viewWithTag:HeaderTag + section];
+    if ([self.dataSource sideView:self numberOfRowInSection:section]>6) {
+        if (view.isShowAll) {
+            return [self.dataSource sideView:self numberOfRowInSection:section];
+            
+        } else {
+            return 6;
+            
+        }
+    }
     
-    return [self.dataSource sideView:self numberOfRowInSection:section];
+   return [self.dataSource sideView:self numberOfRowInSection:section];
+
+    
 }
 
 - (__kindof UICollectionViewCell *)collectionView:(UICollectionView *)collectionView cellForItemAtIndexPath:(NSIndexPath *)indexPath{
@@ -134,10 +149,36 @@
 }
 /// 区头
 -(UICollectionReusableView*)collectionView:(UICollectionView *)collectionView viewForSupplementaryElementOfKind:(NSString *)kind atIndexPath:(NSIndexPath *)indexPath{
-    if (kind == UICollectionElementKindSectionHeader) {
-        SideHeadReusableView *reuseView = [collectionView dequeueReusableSupplementaryViewOfKind:UICollectionElementKindSectionHeader withReuseIdentifier:@"SideHeadReusableView" forIndexPath:indexPath];
-        reuseView.titleLabel.text = [self.dataSource sideView:self titleForSection:indexPath.section];
-        return  reuseView;
+    if ([kind isEqualToString:UICollectionElementKindSectionHeader]) {
+        SideHeadReusableView *headerView;
+        if ([headerView viewWithTag:HeaderTag +indexPath.section]) {
+            headerView = [collectionView viewWithTag:HeaderTag +indexPath.section];
+        } else {
+            headerView = [collectionView dequeueReusableSupplementaryViewOfKind:UICollectionElementKindSectionHeader withReuseIdentifier:@"SideHeadReusableView" forIndexPath:indexPath];
+
+        }
+        headerView.tag = HeaderTag+indexPath.section;
+        headerView.titleLabel.text = [self.dataSource sideView:self titleForSection:indexPath.section];
+        if (headerView.isShowAll) {
+            [headerView.showAllBtn setTitle:@"收起" forState:UIControlStateNormal];
+            headerView.arrowImageView.image = [UIImage imageNamed:@"jiantou_up"];
+        } else {
+            [headerView.showAllBtn setTitle:@"全部" forState:UIControlStateNormal];            headerView.arrowImageView.image = [UIImage imageNamed:@"jiantou_down"];
+
+        }
+        
+        
+        __weak typeof(headerView) weakHeader = headerView;
+
+        headerView.moreBtnClick = ^(UIButton *btn) {
+            weakHeader.isShowAll = !weakHeader.isShowAll;
+            [UIView performWithoutAnimation:^{
+                [collectionView reloadSections:[NSIndexSet indexSetWithIndex:indexPath.section]];
+            }];
+        };
+        
+        
+        return  headerView;
     } else {
        
         return nil;

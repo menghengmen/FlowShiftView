@@ -21,9 +21,9 @@
             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
             <subviews>
                 <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="SJR-Qh-eza">
-                    <rect key="frame" x="106" y="275" width="46" height="30"/>
+                    <rect key="frame" x="114" y="275" width="31" height="30"/>
                     <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                    <state key="normal" title="Button"/>
+                    <state key="normal" title="筛选"/>
                     <connections>
                         <action selector="drag:" destination="-1" eventType="touchUpInside" id="Wuj-hE-UJd"/>
                     </connections>

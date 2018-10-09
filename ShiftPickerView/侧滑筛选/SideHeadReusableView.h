@@ -12,6 +12,11 @@ NS_ASSUME_NONNULL_BEGIN
 
 @interface SideHeadReusableView : UICollectionReusableView
 @property(nonatomic,strong) UILabel *titleLabel;
+@property(nonatomic,strong) void (^moreBtnClick)(UIButton *btn);
+@property(nonatomic,assign) BOOL isShowAll;///是否显示全部
+@property(nonatomic,strong) UIButton * showAllBtn;///全部按钮
+@property(nonatomic,strong) UIImageView * arrowImageView;///箭头
+
 @end
 
 NS_ASSUME_NONNULL_END
