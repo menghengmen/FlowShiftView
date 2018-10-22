@@ -3,7 +3,7 @@
 
 ![gif图](https://github.com/menghengmen/FlowShiftView/blob/master/gif5%E6%96%B0%E6%96%87%E4%BB%B6.gif)  
 
-##使用
+##  使用
 SideView的协议方法
 ```objc
 @protocol SideViewDatasource <NSObject>
